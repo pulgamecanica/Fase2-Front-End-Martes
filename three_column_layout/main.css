@@ -23,3 +23,12 @@ header {
      -moz-column-gap: 2em;
           column-gap: 2em;  
 }
+
+li {
+    list-style-type: square;
+    text-align: left;
+}
+
+.pricing_features {
+  text-align: center;
+}
