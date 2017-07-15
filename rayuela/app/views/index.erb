@@ -2,32 +2,60 @@
   <img src="img/codea-logo.png" id="logo">
 </header>
 <h1 id="main-title">¡RAYUELA!</h1>
-    <button id="start_btn">Jugar</button><br><br>
+<p id="counter"><p>
+    <button id="start">Jugar</button><br><br>
+
     <table class="table">
+
       <tr id="Player1">
+
+
         <td id="player1"><strong>Jugador 1</strong></td>
-        <td class="active"></td>
+
+        <td id="p1"  class="active"></td>
+
         <%i = 1%>
+
         <%60.times do |num| %>
+
           <%if i == 50 %>
+
             <td class="red"></td>
+
           <%else%>
-            <td id="<%= num %>"></td>
+
+            <td id="<%= num+1 %>"></td>
           <%end%>
             <%i += 1%>
+
         <%end%>
+
       </tr>
+
       <tr id="Player2">
+
         <td id="player2"><strong>Jugador 2</strong></td>
+
         <td id="0" class="active"></td>
+
         <%i = 1%>
+
         <%60.times do |num|%>
+
           <%if i == 50 %>
+
             <td class="red"></td>
+
           <%else%>
-            <td id="<%= num %>"></td>
+
+            <td id="<%= num+1%>"></td>
+
           <%end%>
+
             <%i += 1%>
+
         <%end%>
+
       </tr>
+
 </table>
