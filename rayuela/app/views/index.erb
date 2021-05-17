@@ -3,59 +3,29 @@
 </header>
 <h1 id="main-title">¡RAYUELA!</h1>
 <p id="counter"><p>
-    <button id="start">Jugar</button><br><br>
-
-    <table class="table">
-
-      <tr id="Player1">
-
-
-        <td id="player1"><strong>Jugador 1</strong></td>
-
-        <td id="p1"  class="active"></td>
-
-        <%i = 1%>
-
-        <%60.times do |num| %>
-
-          <%if i == 50 %>
-
-            <td class="red"></td>
-
-          <%else%>
-
-            <td id="<%= num+1 %>"></td>
-          <%end%>
-            <%i += 1%>
-
-        <%end%>
-
-      </tr>
-
-      <tr id="Player2">
-
-        <td id="player2"><strong>Jugador 2</strong></td>
-
-        <td id="0" class="active"></td>
-
-        <%i = 1%>
-
-        <%60.times do |num|%>
-
-          <%if i == 50 %>
-
-            <td class="red"></td>
-
-          <%else%>
-
-            <td id="<%= num+1%>"></td>
-
-          <%end%>
-
-            <%i += 1%>
-
-        <%end%>
-
-      </tr>
-
+<p id="winner"><p>
+<button id="start">Play</button>
+<table class="table">
+  <tr id="Player1">
+    <td id="player1"><strong>Player 1</strong></td>
+    <td id="0"  class="active first"></td>
+    <%60.times do |num| %>
+      <%if num == 50 %>
+        <td id="<%= num+1%>" class="red"></td>
+      <%else%>
+        <td id="<%= num+1 %>"></td>
+      <%end%>
+    <%end%>
+  </tr>
+  <tr id="Player2">
+    <td id="player2"><strong>Player 2</strong></td>
+    <td id="0" class="active first"></td>
+    <%60.times do |num|%>
+      <%if num == 50 %>
+        <td id="<%= num+1%>" class="red"></td>
+      <%else%>
+        <td id="<%= num+1%>"></td>
+      <%end%>
+    <%end%>
+  </tr>
 </table>
